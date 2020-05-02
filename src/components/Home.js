@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../media/banner.png";
+import logo from "../media/logo_grey.png";
 
 const Home = () => {
   return (

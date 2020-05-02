@@ -37,7 +37,7 @@ const Kontakt = () => {
             <Divider />
             <br />
             <FacebookIcon></FacebookIcon>
-            <a href="https://WWW.FACEBOOK.COM/ROZMATURZENI" target="_blank">
+            <a href="https://www.facebook.com/Rozmaturzeni-1172005829635509/" target="_blank">
               www.facebook.com/rozmaturzeni
             </a>
             <FacebookIcon></FacebookIcon>
