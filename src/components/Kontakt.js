@@ -1,74 +1,36 @@
-import React from "react";
-import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Divider from "@material-ui/core/Divider";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import PhoneIcon from "@material-ui/icons/Phone";
-import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
+import React from 'react';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
-  paper: {
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.secondary
-  }
-}));
+export default () => {
+    return (
 
-const Kontakt = () => {
-  const classes = useStyles();
+      <section className="page-section" id="contact">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 text-center">
+              <br />
+              <br />
+              <h2 className="section-heading text-uppercase">Skontaktuj się z nami!</h2>
+              <hr className="divider my-4" />
+              <p className="text-muted whitey contact-text">Chcesz umówić się na spotkanie? Masz pytanie dotyczące naszej oferty?<br />Skontaktuj się z nami mailowo, przez facebooka, bądź telefonicznie</p><br /><br />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-3 ml-auto text-center mb-5 mb-lg-0">
+              <i className="fa fa-phone fa-3x mb-3 text-muted whitey"></i>
+              <div className="text-muted whitey">+48 530 466 680</div>
+            </div>
+            <div className="col-lg-3 mr-auto text-center mb-5 mb-lg-0 no-right-marg">
+              <i className="fa fa-envelope fa-3x mb-3 text-muted whitey"></i><a className="d-block text-muted whitey" href="mailto:rozmaturzeni@gmail.com">rozmaturzeni@gmail.com</a>
+            </div>
+            <div className="col-lg-3 mr-auto text-center mb-5 mb-lg-0">
+              <i className="fa fa-facebook fa-3x mb-3 text-muted whitey"></i><a className="d-block text-muted whitey" href="https://www.facebook.com/Rozmaturzeni-1172005829635509" rel="noopener noreferrer" target="_blank">Nasz Fanpage</a>
+            </div>
+          </div>
+          <br />
+          <br />
+          {/* Tczew, ul. Topolowa 23   */}
+        </div>
+      </section>
 
-  return (
-    <div className="container pages">
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={12}>
-          ZAPRASZAMY DO KONTAKTU
-        </Grid>
-        <Grid item xs={12} sm={7}>
-          <Paper className={classes.paper}>
-            <br />
-            <PhoneIcon></PhoneIcon>+48 530 466 680<PhoneIcon></PhoneIcon>
-            <br />
-            <br />
-            <Divider />
-            <br />
-            <FacebookIcon></FacebookIcon>
-            <a href="https://www.facebook.com/Rozmaturzeni-1172005829635509/" target="_blank">
-              www.facebook.com/rozmaturzeni
-            </a>
-            <FacebookIcon></FacebookIcon>
-            <br />
-            <br />
-            <Divider />
-            <br />
-            <EmailOutlinedIcon></EmailOutlinedIcon>
-            <a href="mailto:rozmaturzeni@gmail.com">rozmaturzeni@gmail.com</a>
-            <EmailOutlinedIcon></EmailOutlinedIcon>
-            <br />
-            <br />
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={5}>
-          <Paper className={classes.paper}>
-            <br />
-            <b>DANE FIRMY</b>
-            <br /><br />
-            <Divider />
-            <br />
-            Adam Poniatowski, <br />
-            Czatkowy 16, <br />
-            83-110 Tczew
-            <br />
-            NIP: 593 262 31 62,<br />REGON: 384 992 797
-          </Paper>
-        </Grid>
-      </Grid>
-    </div>
-  );
-};
-
-export default Kontakt;
+    )
+}
