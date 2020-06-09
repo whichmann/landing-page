@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,21 +18,87 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <title>Rozmaturzeni</title>
+</head>
 
-    <title>Rozmaturzeni App</title>
-  </head>
-  <body>
+<body id="page-top">
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#"><img src="LogoWhite.png" width="60px" alt="" /></a>
+            <span style="color: white !important;">ROZMATURZENI</span><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fa fa-bars ml-1"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Wartości</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Usługi</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Nasz zespół</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <script>
+        (function($) {
+            "use strict"; // Start of use strict
+
+            // Smooth scrolling using jQuery easing
+            $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+                if (
+                    window.location.pathname.replace(/^\//, "") ==
+                    this.pathname.replace(/^\//, "") &&
+                    window.location.hostname == this.hostname
+                ) {
+                    var target = $(this.hash);
+                    target = target.length ?
+                        target :
+                        $("[name=" + this.hash.slice(1) + "]");
+                    if (target.length) {
+                        $("html, body").animate({
+                                scrollTop: target.offset().top - 72,
+                            },
+                            1000,
+                            "easeInOutExpo"
+                        );
+                        return false;
+                    }
+                }
+            });
+
+            // Closes responsive menu when a scroll trigger link is clicked
+            $(".js-scroll-trigger").click(function() {
+                $(".navbar-collapse").collapse("hide");
+            });
+
+            // Activate scrollspy to add active class to navbar items on scroll
+            $("body").scrollspy({
+                target: "#mainNav",
+                offset: 74,
+            });
+
+            // Collapse Navbar
+            var navbarCollapse = function() {
+                if ($("#mainNav").offset().top > 100) {
+                    $("#mainNav").addClass("navbar-shrink");
+                } else {
+                    $("#mainNav").removeClass("navbar-shrink");
+                }
+            };
+            // Collapse now if page is not at top
+            navbarCollapse();
+            // Collapse the navbar when page is scrolled
+            $(window).scroll(navbarCollapse);
+        })(jQuery); // End of use strict
+    </script>
+</body>
+
 </html>
