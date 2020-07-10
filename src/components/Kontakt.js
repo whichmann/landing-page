@@ -1,4 +1,5 @@
 import React from 'react';
+import map from './../assets/img/map-min.jpg'
 
 export default () => {
     return (
@@ -28,7 +29,17 @@ export default () => {
           </div>
           <br />
           <br />
-          {/* Tczew, ul. Topolowa 23   */}
+  
+          <div className="text-muted whitey">Nasze zajęcia prowadzone są online oraz stacjonarnie w Tczewie. W przyszłości, planujemy rozszerzyć działalność na terenie Gdańska, Gdyni, Starogardu Gdańskiego oraz Malborka.</div>
+          <br />
+          <img className={"map-dojazd"} src={map} alt={"mapa dojazdu"}></img>
+          <br />
+          <div className="text-muted whitey">Tczew, ul. Topolowa 23</div>
+          <br />
+          <br />
+          <br />
+
+
         </div>
       </section>
 

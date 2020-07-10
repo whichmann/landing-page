@@ -2,6 +2,22 @@ import React from 'react';
 import closeSvg from './../assets/img/close-icon.svg';
 
 export default ({ portfolioUslug }) => {
+
+  function KursyArr(someKursy) {
+    return (
+      <ul className="uslugi">
+        <h6>Dostępne kursy:</h6>
+        {someKursy.map((kurs, index) => {
+          return (
+          <li key={index}>
+            {kurs}
+          </li>
+          )
+        })}
+      </ul>
+    )
+  }
+
   return (
     <>
       <section className="bg-light page-section" id="portfolio">
@@ -37,7 +53,7 @@ export default ({ portfolioUslug }) => {
 
       </section>
 
-      {portfolioUslug.map(({ tytul, cena, zdjecie, opis, dluzszyOpis }, index) =>
+      {portfolioUslug.map(({ tytul, cena, zdjecie, opis, dluzszyOpis, dostepneKursy }, index) =>
         <div className="portfolio-modal modal fade" id={`portfolioModal${index}`} key={index} tabIndex="-1" role="dialog" aria-hidden="true">
           <div className="modal-dialog">
             <div className="modal-content">
@@ -49,7 +65,7 @@ export default ({ portfolioUslug }) => {
 
                       <h2 className="text-uppercase">{tytul}</h2>
                       <p className="item-intro text-muted">{opis}</p>
-                      <p className="item-intro text-muted">Cena: {cena} zł/zajęcia</p>
+                      <p className="item-intro text-muted">{cena} zł/zajęcia</p>
 
                       <div className="row">
                         <div className="col-md-8 col-sm-12 text-justify">
@@ -58,7 +74,7 @@ export default ({ portfolioUslug }) => {
                         <div className="col-md-4 col-sm-12">
                           <img className="img-fluid d-block mx-auto img-little" src={zdjecie} alt={tytul} /></div>
                       </div>
-
+                      {!dostepneKursy ? null : KursyArr(dostepneKursy)}
 
                       <button className="btn btn-primary" data-dismiss="modal" type="button"><i className="fa fa-times mr-1"></i>Zamknij</button>
                     </div>
