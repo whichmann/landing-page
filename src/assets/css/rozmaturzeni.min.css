@@ -672,6 +672,20 @@ hr.divider.my-6 {
     border-color: transparent !important;
 }
 
+.modal-dialog {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+}
+
+@media(max-width: 768px) {
+    .modal-dialog {
+        min-height: calc(100vh - 20px);
+    }
+}
+
 section#contact {
     background-color: #1b2938;
     background: url(../img/kontakt.jpg);
@@ -692,11 +706,19 @@ ul.uslugi {
 img.map-dojazd {
     max-width: 80%;
     border-radius: 50%;
-    border: 5px rgb(207, 203, 203) solid;
+    border: 7px rgb(207, 203, 203, 0.5) solid;
 }
 
 section#contact .section-heading {
     color: #fff
+}
+
+.padded-up {
+    padding-top: 2rem;
+}
+
+.padded-down {
+    padding-bottom: 2rem;
 }
 
 section#contact .form-group {

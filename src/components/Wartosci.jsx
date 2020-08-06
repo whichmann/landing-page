@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
 
 export default () => {
     return (
@@ -7,8 +9,8 @@ export default () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
-              <h2 className="section-heading text-uppercase">Wartości</h2>
-              <h3 className="section-subheading text-muted">Dlaczego warto nam zaufać?</h3>
+              <motion.h2 initial={{ opacity: 0 }} animate={{opacity: 1}} className="section-heading text-uppercase">Wartości</motion.h2>
+              <motion.h3 className="section-subheading text-muted">Dlaczego warto nam zaufać?</motion.h3>
               <hr className="divider my-5" />
             </div>
           </div>

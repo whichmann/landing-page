@@ -1,5 +1,6 @@
 import React from 'react';
 import closeSvg from './../assets/img/close-icon.svg';
+import { motion } from 'framer-motion';
 
 export default ({ portfolioUslug }) => {
 
@@ -9,9 +10,9 @@ export default ({ portfolioUslug }) => {
         <h6>Dostępne kursy:</h6>
         {someKursy.map((kurs, index) => {
           return (
-          <li key={index}>
-            {kurs}
-          </li>
+            <li key={index}>
+              {kurs}
+            </li>
           )
         })}
       </ul>
@@ -32,7 +33,7 @@ export default ({ portfolioUslug }) => {
           <div className="row justify-content-center">
             {
               portfolioUslug && portfolioUslug.map(({ tytul, opis, zdjecie }, index) =>
-                <div className="col-md-4 col-sm-6 portfolio-item" key={index}>
+                <motion.div whileHover={{ scale: 1.1 }} className="col-md-4 col-sm-6 portfolio-item" key={index}>
                   <a className="portfolio-link" data-toggle="modal" href={`#portfolioModal${index}`}>
                     <div className="portfolio-hover">
                       <div className="portfolio-hover-content">
@@ -45,7 +46,7 @@ export default ({ portfolioUslug }) => {
                     <h5 className="text-uppercase">{tytul}</h5>
                     <p className="text-muted">{opis}</p>
                   </div>
-                </div>
+                </motion.div>
               )
             }
           </div>
@@ -76,7 +77,8 @@ export default ({ portfolioUslug }) => {
                       </div>
                       {!dostepneKursy ? null : KursyArr(dostepneKursy)}
 
-                      <button className="btn btn-primary" data-dismiss="modal" type="button"><i className="fa fa-times mr-1"></i>Zamknij</button>
+                      <motion.button whileHover={{ scale: 1.1 }}
+                        transition={{ type: 'tween', duration: .2 }} className="btn btn-primary" data-dismiss="modal" type="button"><i className="fa fa-times mr-1"></i>Zamknij</motion.button>
                     </div>
                   </div>
                 </div>

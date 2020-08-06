@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 export default ({ opisZespolu }) => {
     return (
         <>
@@ -15,9 +15,10 @@ export default ({ opisZespolu }) => {
                     <div className="row justify-content-center">
                         {
                             opisZespolu.map(({ imie, opis, zdjecie, doswiadczenie }, index) =>
-                                <div className="col-lg-3 col-md-6 col-sm-12" key={index}>
+                                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12" key={index}>
                                     <div className="team-member">
-                                        <img className="mx-auto rounded-circle" src={zdjecie} alt="" />
+                                        <motion.img whileHover={{ scale: 1.3, originY: .6 }}
+                                            transition={{ type: 'tween', duration: .2 }} className="mx-auto rounded-circle" src={zdjecie} alt="Zdjęcie osoby" />
                                         <h4>{imie}</h4>
                                         <p className="text-muted">{opis}</p>
                                         <p className="text-muted"><i>{doswiadczenie}</i></p>

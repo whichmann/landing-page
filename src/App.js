@@ -52,7 +52,7 @@ function App() {
     {
       imie: "Kacper Kędzierski",
       zdjecie: KkAvatar,
-      opis: `Odpowiedzialna za matematykę, język angielski, C/C++, Python`,
+      opis: `Odpowiedzialny za matematykę, język angielski, C/C++, Python`,
       doswiadczenie: "Doświadczenie -  2 lata"
     },
     {
