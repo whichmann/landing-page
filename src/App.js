@@ -8,17 +8,17 @@ import Start from './components/Start'
 import Footer from './components/Footer'
 
 
-import ApAvatar from './assets/img/team/ap.png'
-import ArAvatar from './assets/img/team/ar.jpg'
-import PkAvatar from './assets/img/team/pk.jpg'
-import EbAvatar from './assets/img/team/eb.jpg'
-import KkAvatar from './assets/img/team/kk.jpg'
-import MkAvatar from './assets/img/team/mk.jpg'
-import TpAvatar from './assets/img/team/tp.jpg'
+import ApAvatar from './assets/img/team/ap-min.png'
+import ArAvatar from './assets/img/team/ar-min.jpg'
+import PkAvatar from './assets/img/team/pk-min.jpg'
+import EbAvatar from './assets/img/team/eb-min.jpg'
+import KkAvatar from './assets/img/team/kk-min.jpg'
+import MkAvatar from './assets/img/team/mk-min.jpg'
+import TpAvatar from './assets/img/team/tp-min.jpg'
 
-import wPigulce from './assets/img/uslugi/w-pigulce.jpg'
-import kursy from './assets/img/uslugi/kursy.jpg'
-import online from './assets/img/uslugi/online.jpg'
+import wPigulce from './assets/img/uslugi/w-pigulce-min.jpg'
+import kursy from './assets/img/uslugi/kursy-min.jpg'
+import online from './assets/img/uslugi/online-min.jpg'
 
 import './App.css';
 
@@ -52,7 +52,7 @@ function App() {
     {
       imie: "Kacper Kędzierski",
       zdjecie: KkAvatar,
-      opis: `Odpowiedzialna za matematykę i język angielski`,
+      opis: `Odpowiedzialny za matematykę, język angielski, C/C++, Python`,
       doswiadczenie: "Doświadczenie -  2 lata"
     },
     {
@@ -76,23 +76,23 @@ function App() {
       dluzszyOpis: `Spotkania w wąskim gronie, trwające 8h (z poczęstunkiem w trakcie lekcji).
       Omówienie matury podstawowej od a do z, z uwypukleniem najistotniejszych elementów.
       W przypadku matematyki - przygotowany specjalny arkusz przez prowadzącego zajęcia.
-      W ramach przerwy, możliwość konsultacji z trenerami.`,
+      W ramach przerwy, możliwość konsultacji z trenerami.
+      Ponadto, kilka dni po zajęciach, w dobranym terminie dodatkowe konsultacje na naszym discordzie`,
       zdjecie: wPigulce,
-      cena: "129"
+      cena: "Cena wyjściowa: 129"
     },
     {
-      tytul: 'Kurs przygotowujący',
+      tytul: 'Kursy przygotowujące',
       opis: 'Kurs przygotowujący do egzaminu maturalnego i 8-klasisty.',
-      dluzszyOpis: `regularne zajęcia (częstotliwość ~ 2h/tydzień)
-      omówienie matury podstawowej od a do z z
-      uwypukleniem najistotniejszych elementów
-      uczniowie realizują zadania przy tablicy przy
-      pomocy prowadzących
-      omówienie tematów wraz z uwypukleniem
-      najczęstszych błędów, w ramach przerwy
+      dluzszyOpis: `Regularne zajęcia (częstotliwość ~ 2h/tydzień)
+      z omówieniem egzaminów od a do z,
+      uwypukleniem najistotniejszych elementów. 
+      Uczniowie realizują zadania przy tablicach pomocniczych, przy asyście prowadzących.
+      Omówienie tematów wraz z podkreśleniem najczęstszych błędów. W ramach przerwy
       możliwość konsultacji z trenerami`,
       zdjecie: kursy,
-      cena: "39"
+      dostepneKursy: ["Angielski", "Niemiecki","Matematyka","Polski", "Geografia", "C/C++"],
+      cena: "Cena: 39"
     },
     {
       tytul: 'Kurs online',
@@ -107,7 +107,7 @@ function App() {
       omówienie tematów wraz z uwypukleniem
       najczęstszych błędów`,
       zdjecie: online,
-      cena: "39"
+      cena: "Cena: 39"
     }
   ]
 

@@ -188,7 +188,7 @@ img::-moz-selection {
 header.masthead {
     text-align: center;
     color: rgb(255, 255, 255);
-    background-image: url(../img/background.jpg);
+    background-image: url(../img/background-min.jpg);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -672,15 +672,53 @@ hr.divider.my-6 {
     border-color: transparent !important;
 }
 
+.modal-dialog {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+}
+
+@media(max-width: 768px) {
+    .modal-dialog {
+        min-height: calc(100vh - 20px);
+    }
+}
+
 section#contact {
     background-color: #1b2938;
-    background-image: url(../img/kontakt.jpg);
+    background: url(../img/kontakt.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
     background-repeat: no-repeat;
     background-position: center
 }
 
+ul.uslugi {
+    list-style-type: disc;
+    padding-left: 10px;
+    text-align: left;
+}
+
+img.map-dojazd {
+    max-width: 80%;
+    border-radius: 50%;
+    border: 7px rgb(207, 203, 203, 0.5) solid;
+}
+
 section#contact .section-heading {
     color: #fff
+}
+
+.padded-up {
+    padding-top: 2rem;
+}
+
+.padded-down {
+    padding-bottom: 2rem;
 }
 
 section#contact .form-group {
