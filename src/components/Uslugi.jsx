@@ -21,7 +21,10 @@ export default ({ portfolioUslug }) => {
 
   return (
     <>
-      <section className="bg-light page-section" id="portfolio">
+      <div class="bg"></div>
+      <div class="bg bg2"></div>
+      <div class="bg bg3"></div>
+      <section className="page-section" id="portfolio">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
@@ -42,7 +45,7 @@ export default ({ portfolioUslug }) => {
                     </div>
                     <img className="img-fluid" src={zdjecie} alt="portfolio_img" />
                   </a>
-                  <div className="portfolio-caption">
+                  <div className="blurred-box portfolio-caption">
                     <h5 className="text-uppercase">{tytul}</h5>
                     <p className="text-muted">{opis}</p>
                   </div>
