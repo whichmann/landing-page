@@ -91,7 +91,7 @@ function App() {
       Omówienie tematów wraz z podkreśleniem najczęstszych błędów. W ramach przerwy
       możliwość konsultacji z trenerami`,
       zdjecie: kursy,
-      dostepneKursy: ["Angielski", "Niemiecki","Matematyka","Polski", "Geografia", "C/C++"],
+      dostepneKursy: ["Angielski", "Niemiecki", "Matematyka", "Polski", "Geografia", "C/C++"],
       cena: "Cena: 39"
     },
     {
