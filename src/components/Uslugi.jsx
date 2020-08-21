@@ -21,10 +21,7 @@ export default ({ portfolioUslug }) => {
 
   return (
     <>
-      <div class="bg"></div>
-      <div class="bg bg2"></div>
-      <div class="bg bg3"></div>
-      <section className="page-section" id="portfolio">
+      <section className="bg-light page-section" id="portfolio">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
